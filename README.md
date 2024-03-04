@@ -1,6 +1,8 @@
 # Care Sponsors
 
-This project builds from the existing work on the [employment tribunal scraper](https://github.com/bureau-local/employement-tribunal)
+This project looks at [the list of registered visa sponsors](https://www.gov.uk/government/publications/register-of-licensed-sponsors-workers), looking specificaly at sponsors working in the domiciliary care sector and how the number of sponsors as grown over time.
+
+The project also makes use of our existing work with the [employment tribunal scraper](https://github.com/bureau-local/employement-tribunal), getting cases involving domiciliary care sponsors.
 
 ### The Data
 The care sponsors data produced as part of this project can be found in [these googlesheets](https://docs.google.com/spreadsheets/d/1iPB56kDgxa9FGxA6Y_-g-AsE2tlOPGFyk4-O6SCF67Q/edit#gid=626523347)
@@ -38,3 +40,15 @@ Now that we have both the decisions and documents data for the domiciliary care 
 14. `find-missing-sponsors.py`, get the list of sponsors which are no longer on the register 
 15. `add-user-input-data.py`, add the data that was added manually by the reporters to the sponsors cases data
 16. `get-care-sponsors-count-by-date.py`, get the analysis of the number of care sponsors on the register at various point in time
+
+### Notes
+You get the homecare agencies [from the CQC website here](https://www.cqc.org.uk/search/all?query=&location-query=&radius=&display=list&sort=relevance&last-published=&filters[]=archived:active&filters[]=lastPublished:all&filters[]=more_services:homecare-agencies&filters[]=services:all&filters[]=specialisms:all)
+
+And the care homes [from the CQC website here](https://www.cqc.org.uk/search/all?query=&location-query=&radius=&display=list&sort=relevance&last-published=&filters[]=archived:active&filters[]=careHomes:all&filters[]=lastPublished:all&filters[]=more_services:all&filters[]=services:care-home&filters[]=specialisms:all)
+
+The CQC's website limits the size of the CSV you can download to 15,000 rows
+So we need to download the active and archived locations seperately
+
+The CQC files currently in the data-in folder were downloaded on 24/07/2023
+
+
