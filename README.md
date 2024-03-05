@@ -30,6 +30,7 @@ You can then copy `decisions-data.csv` from the employment tribunal project to t
 Now that we know which tribunal employment cases involve domiciliary care sponsors, we'll go back to the employment tribunal project and go through the more cumbersome step of getting the documents relevant to these sponsors, it will for instance allow us to know if the case was dismissed, strike-out, withdrawn etc... 
 
 So copy `all-skilled-home-care-sponsors.csv` to the `data-in` folder of the employmen tribunal project and continue with...
+
 10. `get-reports-with-priority.py`, download the documents and get the data for the domiciliary care sponsors cases
 11. `assign-outcome-to-document-data.py`, evaluate from the name of the document what the outcome of the case was
 12. `json-to-csv.py`, convert the json data to csv
